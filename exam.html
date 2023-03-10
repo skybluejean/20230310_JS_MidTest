@@ -62,12 +62,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-/*const body = document.querySelector('body');
-body.style.display = 'flex';
-body.style.flexDirection = 'column';
-body.style.justifyContent = 'center';
-body.style.fontSize = '30px';
-*/
+
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -89,27 +84,171 @@ body.style.fontSize = '30px';
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////
-    ////teamInformation 컨테이너 설정  children[0]
-    const teamInfo = document.createElement('div');
+
+
+
+    /*
+    function createContainer(mainName,element,e_id,id_Name,parent,textContent){
+      mainName = setAttribute('e_id',"id_Name");
+    }
+
+
+    const firstBox = createContainer(teamInfo,id,'team-information',mainContainer,team_Information){
+    */
+
+
+    /*
+    teamInfo.setAttribute('id',"team-information");
     console.dir(teamInfo);
     mainContainer.appendChild(teamInfo); 
+    teamInfo.style.display = 'grid';
+    teamInfo.style.gridTemplateRows = '5px'
     teamInfo.style.backgroundColor = 'violet';
+    teamInfo.style.padding = '20px';
     teamInfo.style.width = '500px';
-    teamInfo.style.height = '800px';
-    teamInfo.textContent = "teamInformation";
-    //const teamInfoTitle = document.createTextNode("teamInformation");
-    //teamInfo.appendChild(teamInfoTitle);
+    teamInfo.style.height = '300px';
+    teamInfo.textContent = "team_Information";
+      */
+
+
+
+    ////teamInformation 컨테이너 설정  children[0]
+    const teamInfo = document.createElement('div');
+    teamInfo.setAttribute('id',"team-information");
+    console.dir(teamInfo);
+    mainContainer.appendChild(teamInfo); 
+    teamInfo.style.display = 'grid';
+    teamInfo.style.gridTemplateRows = '25px'
+    teamInfo.style.backgroundColor = 'violet';
+    teamInfo.style.padding = '20px';
+    teamInfo.style.width = '500px';
+    teamInfo.style.height = '1200px';
+    teamInfo.textContent = "team_Information";
+
+    const members = a.teamInformation.teamAllMember;
+    console.dir(members);
+    //members = document.createElement('span');
+    //members.style.backgroundColor = 'hotpink';
+    //members.style.width = '300px';
+    //members.style.height = '200px';
+    
+    /*
+    function membersProfile(memberNumber,name,posi,gitAdd){
+      const card = document.createElement('div');
+      for(let i = 0; i < members.length; i++){}
+        switch(i){
+          case 1
+          : 
+          num = a.teamInformation.teamAllMember[0].memberNumber;
+          name = a.teamInformation.teamAllMember[0].name;
+          posi = a.teamInformation.teamAllMember[0].teamPosition;
+          gitAdd = a.teamInformation.teamAllMember[0].githubAddress;
+          break;
+          
+          case 2
+          : num = a.teamInformation.teamAllMember[1].memberNumber;
+          name = a.teamInformation.teamAllMember[1].name;
+          posi = a.teamInformation.teamAllMember[1].teamPosition;
+          gitAdd = a.teamInformation.teamAllMember[1].githubAddress;
+          break;
+          
+          case 3
+          : num = a.teamInformation.teamAllMember[2].memberNumber;
+          name = a.teamInformation.teamAllMember[2].name;
+          posi = a.teamInformation.teamAllMember[2].teamPosition;
+          gitAdd = a.teamInformation.teamAllMember[2].githubAddress;
+          break;
+          
+          case 4
+          : num = a.teamInformation.teamAllMember[3].memberNumber;
+          name = a.teamInformation.teamAllMember[3].name;
+          posi = a.teamInformation.teamAllMember[3].teamPosition;
+          gitAdd = a.teamInformation.teamAllMember[3].githubAddress;
+          break;
+          
+          default
+          : num = a.teamInformation.teamAllMember[4].memberNumber;
+          name = a.teamInformation.teamAllMember[4].name;
+            posi = a.teamInformation.teamAllMember[4].teamPosition;
+            gitAdd = a.teamInformation.teamAllMember[4].githubAddress;
+            break;
+          }
+        }
+        */
+
+
+    for(let i = 0; i < 6; i++){
+      const makeKeyArr = document.createElement('section');
+      /*
+      if(i==0){
+        makeKeyArr.setAttribute('class','teamNumber');
+      }else if(i==1){
+        makeKeyArr.setAttribute('class','teamName');
+      }else if(i==2){
+        makeKeyArr.setAttribute('class','teaNameStory');
+      }else if(i==3){
+        makeKeyArr.setAttribute('class','teamManager');
+      }else{
+        makeKeyArr.setAttribute('class','teamAllMember');
+      }
+      */
+      switch(i){
+        case 1
+        : makeKeyArr.setAttribute('class','teamNumber');
+        makeKeyArr.append('TeamNumber : 1');
+        break;
+        case 2
+        : makeKeyArr.setAttribute('class','teamName');
+        makeKeyArr.append('TeamName : 만수무강');
+        break;
+        case 3
+        : makeKeyArr.setAttribute('class','teaNameStory');
+        makeKeyArr.append('TeamNameStory : 팀원들 모두가 함께하는 시간동안 건강하기를 기원한다는 뜻에서 짓게 되었습니다.');
+        break;
+        case 4
+        : makeKeyArr.setAttribute('class','teamManager');
+        makeKeyArr.append('TeamManager : 공욱재');
+        break;
+        default  
+        : makeKeyArr.setAttribute('class','teamAllMember');
+        makeKeyArr.append('TeamAllMembers');
+        break;
+      }
+
+      teamInfo.appendChild(makeKeyArr);
+    }
+
+
+    /*
+    const pro = [a.teamInformation.teamAllMember[0],a.teamInformation.teamAllMember[1],
+    a.teamInformation.teamAllMember[2],a.teamInformation.teamAllMember[3]];
+    */
+    
+
+    /*
+    const memberFileUl = document.createElement('ul');
+    teamInfo.appendChild(memberFileUl);
+
+    for(let i = 0; i < 4; i++){
+      const allMember = document.createElement('li');
+      memberFileUl.appendChild(allMember);
+    }
+    */
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     ////traininginformation 컨테이너 설정  children[1]
     const trainingInfo = document.createElement('div');
+    trainingInfo.setAttribute('id','training-information');
     console.dir(trainingInfo);
     mainContainer.appendChild(trainingInfo);
-    trainingInfo.style.backgroundColor = 'lightgray';
+    trainingInfo.style.display = 'grid';
+    trainingInfo.style.gridTemplateRows = '30px'
+    trainingInfo.style.backgroundColor = 'cyan';
+    trainingInfo.style.padding = '20px';
     trainingInfo.style.width = '500px';
-    trainingInfo.style.height = '800px';
-    trainingInfo.textContent = "trainingInformation";
+    trainingInfo.style.height = '300px';
+    trainingInfo.textContent = "training_Information";
     //trainingInfo.style.listStyleType = 'none';
 
     const subList = [
@@ -129,77 +268,55 @@ body.style.fontSize = '30px';
     
     for(let i = 0; i < subList.length; i++){
       const subject = document.createElement('li');
+      
+      switch(i){
+        case 1
+        : subject.append(subList[0]);
+        break;
+        case 2
+        : subject.append(subList[1]);
+        break;
+        case 3
+        : subject.append(subList[2]);
+        break;
+        case 4
+        : subject.append(subList[3]);
+        break;
+        case 5
+        : subject.append(subList[4]);
+        break;
+        case 6
+        : subject.append(subList[5]);
+        break;
+        case 7
+        : subject.append(subList[6]);
+        break;
+        case 8
+        : subject.append(subList[7]);
+        break;
+        default
+        : subject.append(subList[8]);
+      }
+      
       subUl.appendChild(subject);
       //console.dir(subject);
     }
-    
-
-
-      /*
-      switch(text){
-        
-        case 0
-        : document.createTextNode("웹프로그래밍 기본");
-        subject[0].appendChild(text);
-        break;
-        
-        case 1
-        : document.createTextNode("Git&GitHub");
-        subject[1].appendChild(text);
-        break;
-
-        case 2
-        : document.createTextNode("Babel JavaScript");
-        subject[2].appendChild(text);
-        break;
-
-        case 3
-        : document.createTextNode("프레임워크 기초");
-        subject[3].appendChild(text);
-        break;
-
-        case 4
-        : document.createTextNode("project C");
-        subject[4].appendChild(text);
-        break;
-
-        case 5
-        : document.createTextNode("백엔드 프레임워크 런타임");
-        subject[5].appendChild(text);
-        break;
-
-        case 6
-        : document.createTextNode("프레임워크 활용");
-        subject[6].appendChild(text);
-        break;
-
-        case 7
-        : document.createTextNode("project A");
-        subject[7].appendChild(text);
-        break;
-
-        case 8
-        : document.createTextNode("project B");
-        subject[8].appendChild(text);
-        break;
-      }
-        */
       
-    
-    
-    //const trainingInfoTitle = document.createTextNode("trainingInformation");
-    //teamInfo.appendChild(trainingInfoTitle);
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     ////designInformation 컨테이너 설정  children[2]
     const designInfo = document.createElement('div');
+    designInfo.setAttribute('id','design-information');
     console.dir(designInfo);
     mainContainer.appendChild(designInfo);
-    designInfo.style.backgroundColor = 'blue';
+    designInfo.style.display = 'grid';
+    designInfo.style.gridTemplateRows = '50px'
+    designInfo.style.backgroundColor = 'lightgreen';
+    designInfo.style.padding = '20px';
     designInfo.style.width = '500px';
-    designInfo.style.height = '800px';
-    designInfo.textContent = "designInformation";
+    designInfo.style.height = '300px';
+    designInfo.textContent = "design_Information";
     mainContainer.style.fontSize = '15px';
 
     const colorsetList = 
@@ -222,7 +339,41 @@ body.style.fontSize = '30px';
     
     for(let i = 0; i < colorsetList.length; i++){
       const colorsetArr = document.createElement('li');
+      switch(i){
+        case 1
+        : colorsetArr.append(colorsetList[0]);
+        break;
+        case 2
+        : colorsetArr.append(colorsetList[1]);
+        break;
+        case 3
+        : colorsetArr.append(colorsetList[2]);
+        break;
+        default
+        : colorsetArr.append(colorsetList[3]);
+        break;
+      }
       colorSetUl.appendChild(colorsetArr);
+    }
+
+    const breakPointUl = document.createElement('ul');
+    designInfo.appendChild(breakPointUl);
+
+    for(let i = 0; i < breakpointList.length; i++){
+      const breakpointArr = document.createElement('li');
+      switch(i){
+        case 1
+        : breakpointArr.append(breakpointList[0]);
+        break;
+        case 2
+        : breakpointArr.append(breakpointList[1]);
+        break;
+        default
+        : breakpointArr.append(breakpointList[2]);
+        break;
+      }
+
+      breakPointUl.appendChild(breakpointArr);
     }
 
     //const designInfoTitle = document.createTextNode("designInformation");
