@@ -6,13 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
+
+
 <body>
+ 
   <div id="root"></div>
-  <script src="./source/modulefile.js"></script><!--변경하지 않을 것-->
+
+  <script src="/modulefile.js"></script><!--변경하지 않을 것-->
   <script>
     const a = _EXAMDATA;
     console.log(a); // 위 하이퍼링크된 js 파일 데이터
     // 자유롭게 활용
-  </script>
+    //console.dir(a);
+    ///////////////////////////////////////////////////////
+    console.dir(a.teamInformation);
+    //console.log(a.teamInformation.Number);
+    //console.log(a.teamInformation.Name);
+    //console.log(a.teamInformation.NameStory);
+    //console.log(a.teamInformation.Manager);
+    console.log(Object.keys(a.teamInformation));
+    console.log(Object.keys(a.teamInformation)[0]);
+    console.log(Object.keys(a.teamInformation)[1]);
+    console.log(Object.keys(a.teamInformation)[2]);
+    console.log(Object.keys(a.teamInformation)[3]);
+    console.log(Object.keys(a.teamInformation)[4]);
+    console.log(a.teamInformation.teamAllMember[0]);
+    console.log(a.teamInformation.teamAllMember[1]);
+    console.log(a.teamInformation.teamAllMember[2]);
+    console.log(a.teamInformation.teamAllMember[3]);
+    ///////////////////////////////////////////////////////
+    console.dir(a.trainingInformation);
+    console.log(a.trainingInformation.subject);
+    console.log(a.trainingInformation.subject[0]);
+    console.log(a.trainingInformation.subject[1]);
+    console.log(a.trainingInformation.subject[2]);
+    console.log(a.trainingInformation.subject[3]);
+    console.log(a.trainingInformation.subject[4]);
+    console.log(a.trainingInformation.subject[5]);
+    console.log(a.trainingInformation.subject[6]);
+    console.log(a.trainingInformation.subject[7]);
+    console.log(a.trainingInformation.subject[8]);
+    ///////////////////////////////////////////////////////
+    console.dir(a.designInformation);
+    console.log(a.designInformation.colorSet);
+    console.log(a.designInformation.colorSet[0]);
+    console.log(a.designInformation.colorSet[1]);
+    console.log(a.designInformation.colorSet[2]);
+    console.log(a.designInformation.colorSet[3]);
+    console.log(a.designInformation.breakPoint);
+    console.log(a.designInformation.breakPoint[0]);
+    console.log(a.designInformation.breakPoint[1]);
+    console.log(a.designInformation.breakPoint[2]);
+
+    
+
+</script>
 </body>
 </html>
