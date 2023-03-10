@@ -20,46 +20,220 @@
     // 자유롭게 활용
     //console.dir(a);
     ///////////////////////////////////////////////////////
-    console.dir(a.teamInformation);
-    //console.log(a.teamInformation.Number);
-    //console.log(a.teamInformation.Name);
-    //console.log(a.teamInformation.NameStory);
-    //console.log(a.teamInformation.Manager);
-    console.log(Object.keys(a.teamInformation));
-    console.log(Object.keys(a.teamInformation)[0]);
-    console.log(Object.keys(a.teamInformation)[1]);
-    console.log(Object.keys(a.teamInformation)[2]);
-    console.log(Object.keys(a.teamInformation)[3]);
-    console.log(Object.keys(a.teamInformation)[4]);
-    console.log(a.teamInformation.teamAllMember[0]);
-    console.log(a.teamInformation.teamAllMember[1]);
-    console.log(a.teamInformation.teamAllMember[2]);
-    console.log(a.teamInformation.teamAllMember[3]);
+    console.dir(a.teamInformation);   //_EXAMDATA안의 teamInformation의 내용을 dir출력
+    console.log(Object.keys(a.teamInformation));  //teamInformation안의 각 개체들의 key출력 => ['teamNumber', 'teamName', 'teamNameStory', 'teamManager', 'teamAllMember']
+    console.log(Object.keys(a.teamInformation)[0]); //teamInformation안의 1번째 객체의 key출력 => teamNumber
+    console.log(Object.keys(a.teamInformation)[1]); //teamInformation안의 2번째 객체의 key출력 => teamName
+    console.log(Object.keys(a.teamInformation)[2]); //teamInformation안의 3번째 객체의 key출력 => teamNameStory
+    console.log(Object.keys(a.teamInformation)[3]); //teamInformation안의 4번째 객체의 key출력 => teamManager
+    console.log(Object.keys(a.teamInformation)[4]); //teamInformation안의 5번째 객체의 key출력 => teamAllMember
+    console.log(a.teamInformation.teamAllMember[0]); //teamInformation안의 teamAllMember(5번째 객체)라는 배열의 0번째 내용을 출력
+    console.log(a.teamInformation.teamAllMember[0].teamPosition); //teamAllMember안의 teamPosition 내용출력 => 팀장
+    console.log(a.teamInformation.teamAllMember[0].name); //teamAllMember안의 teamPosition 내용출력 => 공욱재
+    console.log(a.teamInformation.teamAllMember[0].memberNumber); //teamAllMember안의 teamPosition 내용출력 => 0
+    console.log(a.teamInformation.teamAllMember[0].githubAddress); //teamAllMember안의 teamPosition 내용출력 => https://www.github.com/
+    console.log(a.teamInformation.teamAllMember[1]); //teamAllMember[0]의 내용과 동일, 그안의 객체안의 각 key와 value 값도 동일
+    console.log(a.teamInformation.teamAllMember[2]); //teamAllMember[0]의 내용과 동일, 그안의 객체안의 각 key와 value 값도 동일
+    console.log(a.teamInformation.teamAllMember[3]); //teamAllMember[0]의 내용과 동일, 그안의 객체안의 각 key와 value 값도 동일
     ///////////////////////////////////////////////////////
-    console.dir(a.trainingInformation);
-    console.log(a.trainingInformation.subject);
-    console.log(a.trainingInformation.subject[0]);
-    console.log(a.trainingInformation.subject[1]);
-    console.log(a.trainingInformation.subject[2]);
-    console.log(a.trainingInformation.subject[3]);
-    console.log(a.trainingInformation.subject[4]);
-    console.log(a.trainingInformation.subject[5]);
-    console.log(a.trainingInformation.subject[6]);
-    console.log(a.trainingInformation.subject[7]);
-    console.log(a.trainingInformation.subject[8]);
+    console.dir(a.trainingInformation);   //_EXAMDATA안의 teamInformation의 내용을 dir출력
+    console.log(a.trainingInformation.subject); //trainingInformation안의 subject라는 배열의 내용을 출력
+    console.log(a.trainingInformation.subject[0]);  //subject의 배열안의 0번째 출력 => 웹프로그래밍기본(HTML5&CSS3)
+    console.log(a.trainingInformation.subject[1]);  //subject의 배열안의 1번째 출력 => Git&GitHub
+    console.log(a.trainingInformation.subject[2]);  //subject의 배열안의 2번째 출력 => Babel Javascript
+    console.log(a.trainingInformation.subject[3]);  //subject의 배열안의 3번째 출력 => 프레임워크 기초
+    console.log(a.trainingInformation.subject[4]);  //subject의 배열안의 4번째 출력 => Project C(선택)
+    console.log(a.trainingInformation.subject[5]);  //subject의 배열안의 5번째 출력 => 백엔드프레임워크런타임
+    console.log(a.trainingInformation.subject[6]);  //subject의 배열안의 6번째 출력 => 프레임워크활용
+    console.log(a.trainingInformation.subject[7]);  //subject의 배열안의 7번째 출력 => Project A(데이터 기반 주식 추천 서비스)
+    console.log(a.trainingInformation.subject[8]);  //subject의 배열안의 8번째 출력 => Project B(교통정보제공서비스)
     ///////////////////////////////////////////////////////
-    console.dir(a.designInformation);
-    console.log(a.designInformation.colorSet);
-    console.log(a.designInformation.colorSet[0]);
-    console.log(a.designInformation.colorSet[1]);
-    console.log(a.designInformation.colorSet[2]);
-    console.log(a.designInformation.colorSet[3]);
-    console.log(a.designInformation.breakPoint);
-    console.log(a.designInformation.breakPoint[0]);
-    console.log(a.designInformation.breakPoint[1]);
-    console.log(a.designInformation.breakPoint[2]);
+    console.dir(a.designInformation);   //_EXAMDATA안의 designInformation의 내용을 dir출력
+    console.log(a.designInformation.colorSet); //designInformation안의 colorSet이라는 배열의 내용을 출력
+    console.log(a.designInformation.colorSet[0]); //colorSet의 0번째 내용 출력
+    console.log(a.designInformation.colorSet[1]); //colorSet의 1번째 내용 출력
+    console.log(a.designInformation.colorSet[2]); //colorSet의 2번째 내용 출력
+    console.log(a.designInformation.colorSet[3]); //colorSet의 3번째 내용 출력
+    console.log(a.designInformation.breakPoint); //designInformation안의 breakPoint라는 배열의 내용을 출력
+    console.log(a.designInformation.breakPoint[0]); //breakPoint의 0번째 내용 출력
+    console.log(a.designInformation.breakPoint[1]); //breakPoint의 1번째 내용 출력
+    console.log(a.designInformation.breakPoint[2]); //breakPoint의 2번째 내용 출력
 
+
+///////////////////////////////////////////////////////////////////////////////////
+
+/*const body = document.querySelector('body');
+body.style.display = 'flex';
+body.style.flexDirection = 'column';
+body.style.justifyContent = 'center';
+body.style.fontSize = '30px';
+*/
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    ////전체 컨테이너 설정 div#root
+    const mainContainer = document.querySelector('#root');
+    console.dir(mainContainer);
+    const examData = document.createTextNode("EXAMDATA(MainContainer)");
+    mainContainer.appendChild(examData);
+    console.dir(examData);
+    mainContainer.style.backgroundColor = 'skyblue';
+    mainContainer.style.width = '100vw';
+    mainContainer.style.height = '300vh';
+    mainContainer.style.textAlign = 'center';
+    mainContainer.style.display = 'flex';
+    mainContainer.style.flexDirection = 'column';
+    mainContainer.style.justifyContent = 'space-Evenly';
+    mainContainer.style.alignItems = 'center';
+    //mainContainer.textContent = "EXAMDATA(MainContainer)";
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    ////teamInformation 컨테이너 설정  children[0]
+    const teamInfo = document.createElement('div');
+    console.dir(teamInfo);
+    mainContainer.appendChild(teamInfo); 
+    teamInfo.style.backgroundColor = 'violet';
+    teamInfo.style.width = '500px';
+    teamInfo.style.height = '800px';
+    teamInfo.textContent = "teamInformation";
+    //const teamInfoTitle = document.createTextNode("teamInformation");
+    //teamInfo.appendChild(teamInfoTitle);
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    ////traininginformation 컨테이너 설정  children[1]
+    const trainingInfo = document.createElement('div');
+    console.dir(trainingInfo);
+    mainContainer.appendChild(trainingInfo);
+    trainingInfo.style.backgroundColor = 'lightgray';
+    trainingInfo.style.width = '500px';
+    trainingInfo.style.height = '800px';
+    trainingInfo.textContent = "trainingInformation";
+    //trainingInfo.style.listStyleType = 'none';
+
+    const subList = [
+    '웹프로그래밍 기본',
+    'Git&GitHub',
+    'Babel JavaScript',
+    '프레임워크 기초',
+    'project C',
+    '백엔드 프레임워크 런타임',
+    '프레임워크 활용',
+    'project A',
+    'project B'
+    ];
+
+    const subUl = document.createElement('ul');
+    trainingInfo.appendChild(subUl);
     
+    for(let i = 0; i < subList.length; i++){
+      const subject = document.createElement('li');
+      subUl.appendChild(subject);
+      //console.dir(subject);
+    }
+    
+
+
+      /*
+      switch(text){
+        
+        case 0
+        : document.createTextNode("웹프로그래밍 기본");
+        subject[0].appendChild(text);
+        break;
+        
+        case 1
+        : document.createTextNode("Git&GitHub");
+        subject[1].appendChild(text);
+        break;
+
+        case 2
+        : document.createTextNode("Babel JavaScript");
+        subject[2].appendChild(text);
+        break;
+
+        case 3
+        : document.createTextNode("프레임워크 기초");
+        subject[3].appendChild(text);
+        break;
+
+        case 4
+        : document.createTextNode("project C");
+        subject[4].appendChild(text);
+        break;
+
+        case 5
+        : document.createTextNode("백엔드 프레임워크 런타임");
+        subject[5].appendChild(text);
+        break;
+
+        case 6
+        : document.createTextNode("프레임워크 활용");
+        subject[6].appendChild(text);
+        break;
+
+        case 7
+        : document.createTextNode("project A");
+        subject[7].appendChild(text);
+        break;
+
+        case 8
+        : document.createTextNode("project B");
+        subject[8].appendChild(text);
+        break;
+      }
+        */
+      
+    
+    
+    //const trainingInfoTitle = document.createTextNode("trainingInformation");
+    //teamInfo.appendChild(trainingInfoTitle);
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    ////designInformation 컨테이너 설정  children[2]
+    const designInfo = document.createElement('div');
+    console.dir(designInfo);
+    mainContainer.appendChild(designInfo);
+    designInfo.style.backgroundColor = 'blue';
+    designInfo.style.width = '500px';
+    designInfo.style.height = '800px';
+    designInfo.textContent = "designInformation";
+    mainContainer.style.fontSize = '15px';
+
+    const colorsetList = 
+    [
+      'cadetblue',
+      'salmon',
+      '#ccc',
+      '#333'
+    ]
+
+    const breakpointList = 
+    [
+      '768px',
+      '1280px',
+      '1920px'
+    ]
+
+    const colorSetUl = document.createElement('ul');
+    designInfo.appendChild(colorSetUl);
+    
+    for(let i = 0; i < colorsetList.length; i++){
+      const colorsetArr = document.createElement('li');
+      colorSetUl.appendChild(colorsetArr);
+    }
+
+    //const designInfoTitle = document.createTextNode("designInformation");
+    //teamInfo.appendChild(designInfoTitle);
+    
+    /*
+    mainContainer.appendChild(teamInfo);    ///children[0]
+    mainContainer.appendChild(trainingInfo);    ///children[1]
+    mainContainer.appendChild(designInfo);    ///children[2]
+    */
+
 
 </script>
 </body>
